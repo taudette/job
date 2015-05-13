@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	.container
+		h1 Applicant
+			li Name: #{applicant.name}
+			li Bio: #{applicant.bio}
+			li Skills: #{applicant.skills}
+			li Years of experience: #{applicant.years}
+			li Why do you want to work here?: #{applicant.why}
+			a(href='/delete/#{applicant._id}') Delete
+								
+							

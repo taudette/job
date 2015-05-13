@@ -1,0 +1,21 @@
+extends layout
+
+block content
+	.container
+		h1 Applicants
+		ul#applications.list-unstyled
+			//- have to loop over 
+			for applicant in applicants
+				li 
+					a(href='/view/#{applicant._id}') View
+					li Name: #{applicant.name}
+					li Bio: #{applicant.bio}
+					li Skills: #{applicant.skills}
+					li Years of experience: #{applicant.years}
+					li Why do you want to work here?: #{applicant.why}
+					a(href='/delete/#{applicant._id}') Delete
+					
+					| &nbsp;
+				
+				
+
